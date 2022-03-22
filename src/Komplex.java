@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Komplex {
-    double r = 0;
-    double im = 0;
+    double r;
+    double im;
 
     public Komplex(double r, double im)
     {
@@ -16,17 +16,12 @@ public class Komplex {
 
     public Komplex multiply(Komplex b)
     {
-        double vH;
-        double hH;
-        vH = r * b.r - im * b.im;
-        hH = im * b.r + r * b.im;
-        return new Komplex(vH, hH);
+        return new Komplex(r * b.r - im * b.im, im * b.r + r * b.im);
     }
 
-    public Komplex arg()
+    public double arg()
     {
-        double arctan;
-        arctan = r/im;
+        return Math.atan(im/r);
     }
 
     @Override
