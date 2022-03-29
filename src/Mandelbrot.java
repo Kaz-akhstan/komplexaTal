@@ -88,8 +88,8 @@ public class Mandelbrot implements Runnable{
             double spara = zn.im;
 
             //Byt ut spara * spara mot Komplex multiply
-            zn.r = zn.r * zn.r - spara * spara + z.r;
             zn.im = 2*zn.r*zn.im + z.im;
+            zn.r = zn.r * zn.r - spara * spara + z.r;
 
             /*
             zn.im = 2*zn.r*zn.im + z.im;
